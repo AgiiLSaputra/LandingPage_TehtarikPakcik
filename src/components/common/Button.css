@@ -1,0 +1,140 @@
+.btn {
+  --btn-bg: var(--color-primary);
+  --btn-fg: var(--color-white);
+  --btn-bg-hover: var(--color-primary-strong);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  padding: 0.75rem 1.375rem;
+  border: var(--border-width) solid var(--color-dark);
+  border-radius: var(--radius-pill);
+  background-color: var(--btn-bg);
+  color: var(--btn-fg);
+  font-family: var(--font-heading);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  box-shadow: var(--shadow-hard);
+  cursor: pointer;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.btn:hover {
+  background-color: var(--btn-bg-hover);
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--color-dark);
+}
+
+.btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 var(--color-dark);
+}
+
+.btn__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.btn__icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* --- Ukuran --- */
+
+.btn--sm {
+  min-height: 40px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.btn--sm .btn__icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.btn--lg {
+  min-height: 56px;
+  padding: 1rem 1.75rem;
+  font-size: 1rem;
+}
+
+/* --- Varian --- */
+
+.btn--primary {
+  --btn-bg: var(--color-primary);
+  --btn-fg: var(--color-white);
+  --btn-bg-hover: var(--color-primary-strong);
+}
+
+.btn--secondary {
+  --btn-bg: var(--color-secondary);
+  --btn-fg: var(--color-dark);
+  --btn-bg-hover: #efdcba;
+}
+
+/* Dipakai di atas latar gelap (hero) */
+.btn--accent {
+  --btn-bg: var(--color-accent);
+  --btn-fg: var(--color-dark);
+  --btn-bg-hover: #e7953c;
+  border-color: transparent;
+}
+
+.btn--outline {
+  --btn-bg: rgba(255, 251, 243, 0.06);
+  --btn-fg: var(--color-bg);
+  --btn-bg-hover: rgba(255, 251, 243, 0.16);
+  border-color: rgba(255, 251, 243, 0.42);
+  box-shadow: none;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  box-shadow: none;
+}
+
+.btn--whatsapp {
+  --btn-bg: var(--color-success-strong);
+  --btn-fg: var(--color-white);
+  --btn-bg-hover: #1a4d31;
+}
+
+.btn--ghost {
+  --btn-bg: transparent;
+  --btn-fg: var(--color-dark);
+  --btn-bg-hover: var(--color-secondary);
+  box-shadow: none;
+}
+
+.btn--ghost:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* --- Nonaktif (data belum diisi) --- */
+
+.btn:disabled {
+  cursor: not-allowed;
+  background-color: transparent;
+  border-color: rgba(43, 27, 14, 0.32);
+  border-style: dashed;
+  color: var(--color-muted);
+  box-shadow: none;
+  transform: none;
+}
+
+.btn:disabled:hover {
+  background-color: transparent;
+  color: var(--color-muted);
+  transform: none;
+  box-shadow: none;
+}
