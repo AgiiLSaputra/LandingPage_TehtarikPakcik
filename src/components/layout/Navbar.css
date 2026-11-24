@@ -1,0 +1,205 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: transparent;
+  transition:
+    background-color var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
+  border-bottom: 2px solid transparent;
+}
+
+.navbar--scrolled {
+  background-color: var(--color-bg);
+  border-bottom-color: var(--color-dark);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Di atas hero gelap: teks terang, latar transparan */
+.navbar--top .navbar__name {
+  color: var(--color-bg);
+}
+
+.navbar--top .navbar__link {
+  color: rgba(245, 230, 204, 0.78);
+}
+
+.navbar--top .navbar__link:hover {
+  color: #fff;
+  background-color: rgba(245, 230, 204, 0.12);
+}
+
+.navbar--top .navbar__link.is-active {
+  color: var(--color-bg);
+}
+
+.navbar--top .navbar__toggle {
+  border-color: rgba(245, 230, 204, 0.4);
+  background-color: rgba(245, 230, 204, 0.1);
+  color: var(--color-bg);
+}
+
+.navbar--top .navbar__toggle:hover {
+  background-color: rgba(245, 230, 204, 0.22);
+}
+
+.navbar--top .navbar__cta {
+  --btn-bg: rgba(34, 99, 63, 0.92);
+  --btn-fg: #fff;
+  --btn-bg-hover: #1a4d31;
+  border-color: rgba(245, 230, 204, 0.35);
+  box-shadow: none;
+}
+
+.navbar--top .navbar__cta:hover {
+  box-shadow: none;
+}
+
+.navbar--top .navbar__cta:disabled,
+.navbar--top .navbar__cta:disabled:hover {
+  border-color: rgba(245, 230, 204, 0.34);
+  background-color: rgba(245, 230, 204, 0.08);
+  color: rgba(245, 230, 204, 0.62);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  height: var(--navbar-height);
+}
+
+/* --- Merek --- */
+
+.navbar__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  min-width: 0;
+}
+
+.navbar__logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.navbar__name {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --- Tautan --- */
+
+.navbar__nav {
+  display: none;
+}
+
+.navbar__list {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.navbar__link {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-pill);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-muted);
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.navbar__link:hover {
+  color: var(--color-dark);
+  background-color: var(--color-secondary);
+}
+
+.navbar__link.is-active {
+  color: var(--color-dark);
+  font-weight: 600;
+}
+
+.navbar__link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: 0.25rem;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--color-accent);
+}
+
+/* --- Aksi --- */
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar__cta {
+  display: none;
+}
+
+.navbar__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: var(--border-width) solid var(--color-dark);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-secondary);
+  color: var(--color-dark);
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.navbar__toggle:hover {
+  background-color: var(--color-accent);
+}
+
+.navbar__toggle:active {
+  transform: scale(0.96);
+}
+
+@media (min-width: 768px) {
+  .navbar__cta {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar__nav {
+    display: block;
+  }
+
+  .navbar__toggle {
+    display: none;
+  }
+
+  .navbar__name {
+    font-size: 1.0625rem;
+  }
+
+  .navbar__link {
+    font-size: 0.9375rem;
+    padding-inline: 0.875rem;
+  }
+}
