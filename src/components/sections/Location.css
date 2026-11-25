@@ -1,0 +1,118 @@
+.location__inner {
+  display: grid;
+  gap: var(--space-5);
+  align-items: center;
+}
+
+.location__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.location__list {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.location__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.location__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border: var(--border-width) solid var(--color-dark);
+  border-radius: 50%;
+  background-color: var(--color-secondary);
+  color: var(--color-primary-strong);
+}
+
+.location__label {
+  color: var(--color-muted);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.location__value {
+  color: var(--color-dark);
+  font-weight: 500;
+}
+
+/* --- Panel peta ilustratif (pengganti iframe) --- */
+
+.location__map {
+  position: relative;
+}
+
+.location__map-grid {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: 280px;
+  padding: var(--space-4);
+  overflow: hidden;
+  border: var(--border-width) solid var(--color-dark);
+  border-radius: var(--radius-card);
+  background-color: var(--color-bg-alt);
+  background-image:
+    linear-gradient(rgba(43, 27, 14, 0.075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(43, 27, 14, 0.075) 1px, transparent 1px),
+    radial-gradient(circle at 70% 30%, rgba(217, 131, 36, 0.22), transparent 60%);
+  background-size:
+    28px 28px,
+    28px 28px,
+    100% 100%;
+  box-shadow: var(--shadow-hard);
+}
+
+.location__pin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: var(--border-width) solid var(--color-dark);
+  border-radius: 50% 50% 50% 4px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: rotate(-45deg);
+  box-shadow: var(--shadow-hard);
+}
+
+.location__pin svg {
+  transform: rotate(45deg);
+}
+
+.location__map-label {
+  padding: 0.375rem 0.875rem;
+  border: var(--border-width) solid var(--color-dark);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-bg);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+
+@media (min-width: 900px) {
+  .location__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+  }
+
+  .location__map-grid {
+    min-height: 340px;
+  }
+}
