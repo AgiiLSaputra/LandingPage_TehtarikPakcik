@@ -1,0 +1,30 @@
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  height: 100%;
+  margin: 0;
+  padding: var(--space-3);
+  border: var(--border-width) solid var(--color-dark);
+  border-radius: var(--radius-card);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-hard);
+}
+
+.testimonial-card__mark {
+  color: var(--color-accent);
+}
+
+.testimonial-card__text {
+  margin: 0;
+  color: var(--color-dark);
+  font-size: var(--text-base);
+}
+
+.testimonial-card__name {
+  margin-top: auto;
+  color: var(--color-muted);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
