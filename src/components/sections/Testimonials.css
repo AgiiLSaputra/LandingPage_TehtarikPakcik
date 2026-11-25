@@ -1,0 +1,20 @@
+.testimonials__grid {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+  grid-template-columns: 1fr;
+}
+
+.testimonials__grid > li {
+  display: flex;
+}
+
+.testimonials__grid > li > * {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .testimonials__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
