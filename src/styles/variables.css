@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Token desain — Teh Tarik Pak Cik
+   Satu-satunya tempat nilai warna, font, spasi, dan bentuk didefinisikan.
+   ========================================================================== */
+
+:root {
+  /* --- Warna (PRD 7.2) --- */
+  --color-primary: #8b5a2b;
+  --color-primary-strong: #6f4620;
+  --color-dark: #2b1b0e;
+  --color-secondary: #f5e6cc;
+  --color-accent: #d98324;
+  --color-bg: #fffbf3;
+  --color-bg-alt: #fbf1df;
+  --color-success: #2e8b57;
+  --color-success-strong: #22633f;
+  --color-white: #ffffff;
+  --color-muted: #6b5644;
+  --color-line: rgba(43, 27, 14, 0.14);
+
+  /* --- Tipografi --- */
+  --font-heading: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --text-hero: clamp(2rem, 4.2vw + 1rem, 3rem); /* 32px → 48px */
+  --text-h2: clamp(1.625rem, 1.6vw + 1.1rem, 2.25rem); /* 26px → 36px */
+  --text-h3: clamp(1.0625rem, 0.5vw + 0.95rem, 1.25rem); /* 17px → 20px */
+  --text-lead: clamp(1.0625rem, 0.4vw + 1rem, 1.25rem);
+  --text-base: 1rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
+
+  /* --- Spasi (kelipatan 8px) --- */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4rem;
+  --space-7: 6rem;
+
+  /* --- Tata letak --- */
+  --container-max: 1120px;
+  --container-pad: 1.5rem;
+  --section-pad: clamp(4rem, 7vw, 6rem); /* 64px → 96px */
+  --navbar-height: 72px;
+
+  /* --- Bentuk --- */
+  --radius-card: 12px;
+  --radius-pill: 999px;
+  --border-width: 2px;
+  --shadow-hard: 4px 4px 0 var(--color-dark);
+  --shadow-hard-lg: 6px 6px 0 var(--color-dark);
+  --shadow-soft: 0 8px 24px rgba(43, 27, 14, 0.12);
+
+  /* --- Gerak --- */
+  --transition-fast: 150ms ease;
+  --transition: 220ms ease;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --container-pad: 1rem;
+  }
+}
