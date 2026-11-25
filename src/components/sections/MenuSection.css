@@ -1,0 +1,27 @@
+.menu-section__grid {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+  grid-template-columns: 1fr;
+}
+
+.menu-section__grid > li {
+  display: flex;
+}
+
+.menu-section__grid > li > * {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .menu-section__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-4);
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu-section__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
